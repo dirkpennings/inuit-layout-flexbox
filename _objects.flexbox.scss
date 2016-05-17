@@ -92,24 +92,14 @@ $inuit-layout-flex-grid-class:          'layout' !default;
 //------------------------------------
 
 @if $inuit-layout-flex-grid-enable == true {
-
-  /**
-   * Grid with flexible columns widths
-   */
   $i: 1;
   @while $i <= $inuit-layout-columns-number {
-    /**
-     * Flexible item with a size of #{$i}
-     */
     .#{$inuit-layout-namespace}layout--flex .#{$inuit-layout-namespace}layout__item--#{$i} {
       @include flex($i);
     }
     $i: $i + 1;
   }
 
-  /**
-   * Flexible item with a size of 100% (full width)
-   */
   .#{$inuit-layout-namespace}layout--flex .#{$inuit-layout-namespace}layout__item--full {
     @include flex(1 1 100%);
   }
