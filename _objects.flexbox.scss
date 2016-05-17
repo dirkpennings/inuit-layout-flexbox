@@ -1,12 +1,3 @@
-/*------------------------------------*\
-    #FLEXBOX
-\*------------------------------------*/
-
-/**
- * Inuitcss-flexbox objects is a layout system based on flexbox capabilities.
- */
-
-// Predefine the variables below in order to alter and enable specific features.
 $inuit-layout-namespace:                $inuit-namespace !default;
 
 $inuit-layout-gutter:                   $inuit-base-spacing-unit--small !default;
@@ -21,11 +12,6 @@ $inuit-layout-enable-offset:            false !default;
 $inuit-generate-responsive-item-alias:  null !default;
 $inuit-layout-flex-grid-class:          'layout' !default;
 
-
-
-
-// Internally used mixin to quickly generate our different variants based upon
-// the breakpoints defined in `settings.responsive`.
 @mixin inuit-generate-responsive-item() {
   @each $breakpoint in $breakpoints {
 
@@ -45,47 +31,20 @@ $inuit-layout-flex-grid-class:          'layout' !default;
   }
 }
 
-
-
-
-
-/**
- * Layout
- *
- * 1. Defines the default behaviour for how flex items are laid out along the
- *    cross axis on the current line. Item are aligned at the top. Items are
- *    aligned to the top.
- * 2. Defines the alignment along the main axis. Items are aligne on the left.
- */
 .#{$inuit-layout-namespace}#{$inuit-layout-flex-grid-class} {
   @include flexbox();
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start; /* [1] */
-  justify-content: flex-start; /* [2] */
+  align-items: flex-start;
+  justify-content: flex-start;
   margin-right: -$inuit-layout-gutter;
   margin-left: -$inuit-layout-gutter;
 }
 
-
-
-
-
-/**
- * Flex item
- */
 .#{$inuit-layout-namespace}#{$inuit-layout-flex-grid-class} .#{$inuit-layout-namespace}layout__item {
   padding-right: $inuit-layout-gutter;
   padding-left: $inuit-layout-gutter;
 }
-
-
-
-
-
-//------------------------------------
-// Flexible grid system
-//------------------------------------
 
 @if $inuit-layout-flex-grid-enable == true {
   $i: 1;
@@ -119,14 +78,6 @@ $inuit-layout-flex-grid-class:          'layout' !default;
   }
 
 }
-
-
-
-
-
-//------------------------------------
-// Fixed grid system
-//------------------------------------
 
 @if $inuit-layout-fixed-grid-enable == true {
   $i: 1;
@@ -163,14 +114,6 @@ $inuit-layout-flex-grid-class:          'layout' !default;
 
 }
 
-
-
-
-
-//------------------------------------
-// Order
-//------------------------------------
-
 @if $inuit-layout-enable-order == true {
   $i: 1;
   @while $i <= $inuit-layout-columns-number {
@@ -194,18 +137,7 @@ $inuit-layout-flex-grid-class:          'layout' !default;
 
 }
 
-
-
-
-
-//------------------------------------
-// Reverse
-//------------------------------------
-
 @if $inuit-layout-enable-order == true {
-  /**
-   * Reverse item direction
-   */
   .#{$inuit-layout-namespace}layout--reverse {
     -webkit-flex-direction: row-reverse;
     -ms-flex-direction: row-reverse;
@@ -213,15 +145,6 @@ $inuit-layout-flex-grid-class:          'layout' !default;
   }
 }
 
-
-
-
-
-//------------------------------------
-// Offset
-//------------------------------------
-
-// offsets are only available for fixed grid layout
 @if $inuit-layout-enable-offset == true and $inuit-layout-fixed-grid-enable == true {
   $i: 1;
   @while $i <= $inuit-layout-columns-number {
