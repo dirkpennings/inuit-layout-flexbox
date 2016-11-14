@@ -37,13 +37,13 @@ $inuit-layout-flex-grid-class:          'layout' !default;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
-  margin-right: -$inuit-layout-gutter;
-  margin-left: -$inuit-layout-gutter;
+  // margin-right: -$inuit-layout-gutter;
+  // margin-left: -$inuit-layout-gutter;
 }
 
 .#{$inuit-layout-namespace}#{$inuit-layout-flex-grid-class} .#{$inuit-layout-namespace}layout__item {
-  padding-right: $inuit-layout-gutter;
-  padding-left: $inuit-layout-gutter;
+  // padding-right: $inuit-layout-gutter;
+  // padding-left: $inuit-layout-gutter;
 }
 
 @if $inuit-layout-flex-grid-enable == true {
