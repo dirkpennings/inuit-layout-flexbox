@@ -11,3 +11,45 @@ $inuit-layout-enable-offset:     true !default;
 @import '../_tools.flexbox.scss';
 @import '../bower_components/inuit-box-sizing/generic.box-sizing';
 @import '../objects.flexbox';
+
+.layout__item {
+    &:first-child {
+        .demo-block {
+            background-color: #fc3836;
+        }
+    }
+
+    &:nth-child(n+2) {
+        .demo-block {
+            background-color: #60A5EA;
+        }
+    }
+
+    .layout__item {
+        &:first-child {
+            .demo-block {
+                background-color: #8B22D8;
+            }
+        }
+
+        &:nth-child(n+2) {
+            .demo-block {
+                background-color: #60A5EA;
+            }
+        }
+
+        .layout__item {
+            &:first-child {
+                .demo-block {
+                    background-color: #5A1A80;
+                }
+            }
+
+            &:nth-child(n+2) {
+                .demo-block {
+                    background-color: #fc3836;
+                }
+            }
+        }
+    }
+}
