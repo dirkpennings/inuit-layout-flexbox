@@ -1,6 +1,6 @@
 {
   "name": "inuit-layout-flexbox",
-  "version": "1.0.0",
+  "version": "0.0.16",
   "description": "A flexbox grid system for [inuitcss framework](http://www.inuitcss.com).",
   "main": "_objects.flexbox.scss",
   "directories": {
